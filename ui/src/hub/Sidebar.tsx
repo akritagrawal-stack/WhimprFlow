@@ -21,7 +21,7 @@ function NavItem({ item, active, onClick }: { item: NavDef; active: boolean; onC
   const t = useT();
   return (
     <button className="nav-item" aria-current={active ? "page" : undefined} onClick={onClick}>
-      <Icon name={item.icon} size={16} strokeWidth={1.8} />
+      <Icon name={item.icon} size={18} strokeWidth={1.8} />
       {t(item.labelKey)}
     </button>
   );
@@ -32,6 +32,10 @@ export function Sidebar({ page, setPage }: { page: Page; setPage: (p: Page) => v
     <aside className="sidebar">
       {/* The title-bar strip over the sidebar drags the window, like Finder. */}
       <div className="sidebar-drag" data-tauri-drag-region />
+      <div className="sidebar-brand">
+        <span className="sidebar-wordmark">WhimprFlow</span>
+        <span className="sidebar-badge">Local</span>
+      </div>
       <nav className="nav">
         {MAIN.map((n) => (
           <NavItem key={n.key} item={n} active={page === n.key} onClick={() => setPage(n.key)} />

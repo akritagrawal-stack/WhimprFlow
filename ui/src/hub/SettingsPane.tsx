@@ -241,7 +241,7 @@ function ModelDownloadButton({ models, onDone }: { models: ModelInfo[]; onDone: 
         </select>
       )}
       {downloading ? (
-        <span style={{ fontSize: 12, color: "var(--text-muted)" }}>{percent}%</span>
+        <span style={{ fontSize: 12, color: "var(--text-2)" }}>{percent}%</span>
       ) : (
         <Button
                     disabled={!selected}
