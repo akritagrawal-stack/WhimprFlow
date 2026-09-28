@@ -62,7 +62,7 @@ export const es: Record<string, string> = {
   "onboarding.hint": "Si Accesibilidad sigue apagada aunque Ajustes del Sistema la muestre activa, vuelve a hacer clic en Autorizar. WhimprFlow borra la entrada obsoleta de versiones anteriores y vuelve a pedirlo.",
 
   // ── shared permission-row copy (Onboarding + SettingsPane) ────────────
-  "settings.perm.inputMonitoring.detail": "Opcional. Hace que la detección de teclas sea más confiable.",
+  "settings.perm.inputMonitoring.detail": "Hace que la detección de teclas sea más confiable.",
 
   // ── Sidebar.tsx (also reused as pane headers) ─────────────────────────
   "sidebar.nav.history": "Historial",

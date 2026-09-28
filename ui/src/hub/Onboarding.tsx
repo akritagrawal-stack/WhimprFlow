@@ -163,7 +163,10 @@ export function Onboarding({ status, refresh, onEnter }: { status: StatusT; refr
 
   const acc = status.accessibility;
   const mic = status.microphone;
-  const canEnter = acc && mic;
+  const inp = status.input_monitoring;
+  // Input Monitoring used to be waved through as optional (you could Skip
+  // past it). It's required now, same as Accessibility and Microphone.
+  const canEnter = acc && mic && inp;
 
   // Stale grant: macOS says granted, but the key tap never came up because TCC
   // is enforcing an older build's signature. Only flag after a grace period.
@@ -211,9 +214,8 @@ export function Onboarding({ status, refresh, onEnter }: { status: StatusT; refr
             n={4}
             title={t("common.inputMonitoring")}
             detail={t("onboarding.step.inputMonitoring.detail")}
-            done={status.input_monitoring}
+            done={inp}
             locked={!(acc && mic)}
-            optional
             action={<Button disabled={!(acc && mic)} onClick={() => requestInputMonitoring()}>{t("common.grant")}</Button>}
           />
         </Group>

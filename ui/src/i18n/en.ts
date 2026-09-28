@@ -68,7 +68,7 @@ export const en: Record<string, string> = {
   "onboarding.hint": "If Accessibility stays off even though System Settings shows it on, click Grant again. WhimprFlow clears the stale entry from older builds and asks again.",
 
   // ── shared permission-row copy (Onboarding + SettingsPane) ────────────
-  "settings.perm.inputMonitoring.detail": "Optional. Makes key detection more reliable.",
+  "settings.perm.inputMonitoring.detail": "Makes key detection more reliable.",
 
   // ── Sidebar.tsx (also reused as pane headers) ─────────────────────────
   "sidebar.nav.history": "History",
